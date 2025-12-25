@@ -1,0 +1,39 @@
+[project]
+name = "stars-vs-galaxies"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mark Ikonnikov",email = "mrkikonnikov@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fire (>=0.7.1,<0.8.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pre-commit (>=4.5.1,<5.0.0)",
+    "black (>=25.12.0,<26.0.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "nbqa (>=1.9.1,<2.0.0)"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["stars_galaxies"]
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
