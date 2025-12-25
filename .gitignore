@@ -3,9 +3,9 @@
 # Poetry
 poetry.lock
 
-# DVC
-.dvc/
-*.dvc
+## DVC
+#.dvc/
+#*.dvc
 
 # Data / models
 data/
