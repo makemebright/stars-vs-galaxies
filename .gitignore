@@ -9,6 +9,7 @@ poetry.lock
 
 # Data / models
 data/
+!data/*.dvc
 models/
 artifacts/
 
