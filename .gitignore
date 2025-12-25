@@ -1,0 +1,16 @@
+!.dvc
+
+# Poetry
+poetry.lock
+
+# DVC
+.dvc/
+*.dvc
+
+# Data / models
+data/
+models/
+artifacts/
+
+# PyCharm
+.idea/
