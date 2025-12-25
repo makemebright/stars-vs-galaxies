@@ -1,15 +1,15 @@
-!.dvc
+# DVC метаданные
+.dvc/cache/
+.dvc/tmp/
+
+# Исключаем сами данные (DVC их контролирует)
+data/raw/
+data/processed/
 
 # Poetry
 poetry.lock
 
-## DVC
-#.dvc/
-#*.dvc
-
-# Data / models
-data/
-!data/*.dvc
+# Модели и артефакты
 models/
 artifacts/
 
