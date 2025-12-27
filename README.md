@@ -1,7 +1,5 @@
 # Stars vs Galaxies Classification Project
 
-![Project Banner](assets/banner.png) <!-- если есть баннер -->
-
 ## Overview
 
 This project implements a deep learning pipeline to classify astronomical images into two categories: **Stars** and **Galaxies**.
