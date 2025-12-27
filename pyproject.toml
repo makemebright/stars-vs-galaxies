@@ -5,11 +5,29 @@ description = ""
 authors = [
     {name = "Mark Ikonnikov",email = "mrkikonnikov@gmail.com"}
 ]
-readme = "README.md"
-requires-python = ">=3.12"
+
+requires-python = ">=3.9,<3.13"
 dependencies = [
-    "fire (>=0.7.1,<0.8.0)"
+    "fire (>=0.7.1,<0.8.0)",
+    "dvc-gdrive (>=3.0.1,<4.0.0)",
+    "cryptography (==41.0.7)",
+    "pyopenssl (==23.2.0)",
+    "google-auth (==2.23.4)",
+    "google-auth-oauthlib (==1.1.0)",
+    "pydrive2 (==1.19.0)",
+    "gdown (>=5.2.0,<6.0.0)",
+    "torch (>=1.13.1,<1.14.0)",
+    "torchvision (>=0.14.1,<0.15.0)",
+    "torchaudio (>=0.13.1,<0.14.0)",
+    "pytorch-lightning (>=2.0.0,<3.0.0)",
+    "numpy (<2)",
+    "torchmetrics (==0.11.4)",
+    "hydra-core (==1.3.2)",
+    "onnxruntime (>=1.12.1,<2.0)",
+    "matplotlib (<3.10)",
+    "mlflow (<2.9)"
 ]
+
 
 
 [build-system]
@@ -18,12 +36,14 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "pre-commit (>=4.5.1,<5.0.0)",
-    "black (>=25.12.0,<26.0.0)",
-    "isort (>=7.0.0,<8.0.0)",
-    "flake8 (>=7.3.0,<8.0.0)",
-    "nbqa (>=1.9.1,<2.0.0)"
+    "pre-commit (>=2.20.0,<3.0.0)",
+    "black (==22.12.0)",
+    "isort (>=5.12.0,<6.0.0)",
+    "flake8 (>=5.0.4,<6.0.0)",
+    "nbqa (>=1.8.0,<2.0.0)",
+    "dvc[s3] (>=3.65.0,<4.0.0)"
 ]
+
 
 [tool.black]
 line-length = 88
@@ -37,3 +57,10 @@ known_first_party = ["stars_galaxies"]
 [tool.flake8]
 max-line-length = 88
 extend-ignore = ["E203", "W503"]
+
+[tool.poetry]
+name = "stars-vs-galaxies"
+version = "0.1.0"
+description = "Galaxy vs Star classification project"
+authors = ["Your Name"]
+package-mode = false
